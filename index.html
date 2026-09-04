@@ -6,7 +6,7 @@
 <title>Einbürgerungstest</title>
 <meta name="description" content="Einbürgerungstest zum Selbermachen: 33 Fragen, bestanden ab 17 richtigen Antworten.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🥔</text></svg>">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -88,16 +88,19 @@
   <section id="urkunde-seite" hidden>
     <article id="urkunde" class="urkunde">
       <div class="u-rahmen">
-        <p class="u-behoerde">Freie und Hansestadt Hamburg<br>Prüfungsstelle Kartoffelparty</p>
+        <p class="u-behoerde">Bundesamt für Knollen und Einbürgerung<br>
+          <span class="u-behoerde-zeile2">Außenstelle Papenstraße · Prüfungsstelle Kartoffelparty</span></p>
         <h1 class="u-titel">Kartoffelurkunde</h1>
-        <p class="u-unter">Amtliche Bestätigung über die Teilnahme am Einbürgerungstest</p>
+        <p id="u-unter" class="u-unter"></p>
 
-        <p class="u-satz">Hiermit wird bescheinigt, dass</p>
+        <p class="u-satz u-fliess">Hiermit wird gemäß § 1 Abs. 1 der
+          Kartoffelprüfungsverordnung (KartPrüfV) festgestellt, dass</p>
         <p id="u-name" class="u-name"></p>
         <p id="u-fliesstext" class="u-satz u-fliess"></p>
 
         <p id="u-urteil" class="u-urteil"></p>
-        <p id="u-nachsatz" class="u-satz u-fliess"></p>
+
+        <div id="u-paragraphen" class="u-paragraphen"></div>
 
         <div class="u-fuss">
           <div>
@@ -106,9 +109,12 @@
           </div>
           <div class="u-siegel" aria-hidden="true">
             <span>🥔</span>
-            <small>Prüfungsstelle<br>Kartoffelparty</small>
+            <small>Bundesamt für<br>Knollen</small>
           </div>
         </div>
+
+        <p class="u-maschinell">Dieser Bescheid wurde maschinell erstellt und ist auch
+          ohne Unterschrift, Siegel und Rechtsgrundlage gültig.</p>
       </div>
     </article>
 
@@ -127,7 +133,7 @@
   Kein amtlicher Test, ohne Gewähr.
 </footer>
 
-<script src="fragen.js?v=4"></script>
-<script src="quiz.js?v=4"></script>
+<script src="fragen.js?v=5"></script>
+<script src="quiz.js?v=5"></script>
 </body>
 </html>

@@ -153,8 +153,18 @@ h2 { margin: 6px 0 20px; font-size: 22px; line-height: 1.35; }
   padding: 30px 26px 24px;
   text-align: center;
 }
-.u-behoerde { margin: 0 0 18px; font: 600 12px/1.5 system-ui, sans-serif;
+.u-behoerde { margin: 0 0 18px; font: 600 12px/1.6 system-ui, sans-serif;
   letter-spacing: .12em; text-transform: uppercase; color: #8a7a4a; }
+.u-behoerde-zeile2 { font-size: 10.5px; letter-spacing: .08em; }
+
+.u-paragraphen { margin: 20px 0 4px; text-align: left; }
+.u-paragraph { margin-bottom: 13px; }
+.u-paragraph-titel { margin: 0 0 2px; font: 700 12.5px system-ui, sans-serif; }
+.u-paragraph-text { margin: 0; font-size: 13.5px; line-height: 1.5; color: #3a3830; }
+.u-maschinell {
+  margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--linie);
+  font: italic 11.5px/1.5 Georgia, serif; color: #8a8578; text-align: left;
+}
 .u-titel { margin: 0; font-size: 38px; letter-spacing: .02em; }
 .u-unter { margin: 4px 0 26px; font: italic 15px/1.4 Georgia, serif; color: #6c675c; }
 .u-satz { margin: 0 0 8px; font-size: 16px; }
