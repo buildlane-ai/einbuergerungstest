@@ -130,6 +130,73 @@ h2 { margin: 6px 0 20px; font-size: 22px; line-height: 1.35; }
 .auswertung .richtig-war { display: block; font-size: 14px; font-family: system-ui, sans-serif; color: var(--gruen); }
 .auswertung .falsch { color: var(--rot); }
 
+/* Namensfeld */
+.feld { display: block; margin-top: 24px; }
+.feld-titel { display: block; font: 600 14px/1.4 system-ui, sans-serif; margin-bottom: 6px; }
+.feld input {
+  width: 100%; padding: 14px 16px;
+  font: 17px system-ui, sans-serif; color: var(--text);
+  background: #fff; border: 1px solid var(--linie); border-radius: 4px;
+}
+.feld input:focus { outline: 2px solid var(--schwarz); outline-offset: -2px; }
+.feld-hinweis { display: block; margin-top: 6px; font: 13px/1.45 system-ui, sans-serif; color: #8a8578; }
+
+/* Urkunde */
+.urkunde {
+  background: #fffdf6;
+  border: 1px solid var(--linie);
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+.u-rahmen {
+  border: 3px double var(--gold);
+  padding: 30px 26px 24px;
+  text-align: center;
+}
+.u-behoerde { margin: 0 0 18px; font: 600 12px/1.5 system-ui, sans-serif;
+  letter-spacing: .12em; text-transform: uppercase; color: #8a7a4a; }
+.u-titel { margin: 0; font-size: 38px; letter-spacing: .02em; }
+.u-unter { margin: 4px 0 26px; font: italic 15px/1.4 Georgia, serif; color: #6c675c; }
+.u-satz { margin: 0 0 8px; font-size: 16px; }
+.u-fliess { margin: 0 auto 18px; max-width: 44ch; line-height: 1.6; }
+.u-name {
+  margin: 10px 0 22px; padding-bottom: 8px;
+  font-size: 27px; font-weight: 700;
+  border-bottom: 1px solid var(--linie);
+  display: inline-block; min-width: 60%;
+}
+.u-name.leer { color: #bfbab0; letter-spacing: .1em; }
+.u-urteil {
+  display: inline-block; margin: 4px 0 18px; padding: 9px 26px;
+  border: 3px solid; border-radius: 4px; transform: rotate(-2deg);
+  font: 700 20px/1 system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase;
+}
+.u-urteil.bestanden { color: var(--gruen); border-color: var(--gruen); }
+.u-urteil.nicht { color: var(--rot); border-color: var(--rot); }
+.u-fuss {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--linie);
+  text-align: left; gap: 16px;
+}
+.u-klein { margin: 0 0 3px; font: 12px/1.5 system-ui, sans-serif; color: #6c675c; }
+.u-siegel {
+  flex: none; width: 92px; height: 92px; border-radius: 50%;
+  border: 2px dashed var(--rot); color: var(--rot);
+  display: grid; place-content: center; text-align: center;
+  transform: rotate(-8deg);
+}
+.u-siegel span { font-size: 26px; line-height: 1; }
+.u-siegel small { display: block; margin-top: 3px; font: 700 7.5px/1.25 system-ui, sans-serif;
+  letter-spacing: .06em; text-transform: uppercase; }
+.u-knoepfe { margin-top: 8px; }
+
+@media print {
+  body { background: #fff; padding: 0; }
+  footer, .u-knoepfe { display: none !important; }
+  .urkunde { border: 0; box-shadow: none; }
+  #urkunde-seite { page-break-inside: avoid; }
+}
+
 footer {
   max-width: 640px;
   margin: 20px auto 0;

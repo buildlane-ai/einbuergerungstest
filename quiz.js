@@ -2,10 +2,15 @@
   "use strict";
 
   const el = (id) => document.getElementById(id);
-  const bildschirme = { start: el("start"), test: el("test"), ergebnis: el("ergebnis") };
+  const bildschirme = {
+    start: el("start"), test: el("test"),
+    ergebnis: el("ergebnis"), urkunde: el("urkunde-seite")
+  };
 
   let index = 0;
   let gewaehlt = null;
+  let teilnehmer = "";
+  let letztesErgebnis = { richtig: 0, bestanden: false };
   const antworten = new Array(FRAGEN.length).fill(null);
 
   function zeige(name) {
@@ -63,6 +68,7 @@
     const richtige = antworten.reduce(
       (summe, wahl, i) => summe + (wahl === FRAGEN[i].richtig ? 1 : 0), 0);
     const bestanden = richtige >= BESTEHENSGRENZE;
+    letztesErgebnis = { richtig: richtige, bestanden };
 
     const stempel = el("stempel");
     stempel.textContent = bestanden ? "Bestanden" : "Nicht bestanden";
@@ -115,7 +121,59 @@
     zeige("test");
   }
 
-  el("starten").addEventListener("click", () => { frageZeichnen(); zeige("test"); });
+  function urkundeZeichnen() {
+    const { richtig, bestanden } = letztesErgebnis;
+
+    const namensfeld = el("u-name");
+    if (teilnehmer) {
+      namensfeld.textContent = teilnehmer;
+      namensfeld.classList.remove("leer");
+    } else {
+      namensfeld.textContent = " ".repeat(20);
+      namensfeld.classList.add("leer");
+    }
+
+    const heute = new Date().toLocaleDateString("de-DE",
+      { day: "numeric", month: "long", year: "numeric" });
+
+    el("u-fliesstext").textContent =
+      `am ${heute} vor der Prüfungsstelle Kartoffelparty den Einbürgerungstest ` +
+      `abgelegt und dabei ${richtig} von ${FRAGEN.length} Fragen zutreffend ` +
+      `beantwortet hat. Zum Bestehen waren ${BESTEHENSGRENZE} richtige Antworten erforderlich.`;
+
+    const urteil = el("u-urteil");
+    urteil.textContent = bestanden ? "Bestanden" : "Nicht bestanden";
+    urteil.className = "u-urteil " + (bestanden ? "bestanden" : "nicht");
+
+    el("u-nachsatz").textContent = bestanden
+      ? "Diese Urkunde berechtigt ausdrücklich nicht zur Einbürgerung, wohl aber " +
+        "zum Nachschlag am Buffet und zum aufrechten Gang für den Rest des Abends."
+      : "Diese Urkunde berechtigt weder zur Einbürgerung noch zum letzten Bier. " +
+        "Eine Wiederholung ist unbegrenzt oft und kostenfrei möglich.";
+
+    el("u-ort").textContent = `Hamburg, den ${heute}`;
+
+    // Aktenzeichen deterministisch aus Name und Ergebnis
+    let summe = 0;
+    const basis = (teilnehmer || "ohne Namensangabe") + "|" + richtig;
+    for (let i = 0; i < basis.length; i++) summe = (summe * 31 + basis.charCodeAt(i)) % 100000;
+    el("u-akte").textContent =
+      `Aktenzeichen KP-${new Date().getFullYear()}-${String(summe).padStart(5, "0")}`;
+
+    zeige("urkunde");
+  }
+
+  el("starten").addEventListener("click", () => {
+    teilnehmer = el("name").value.trim().replace(/\s+/g, " ");
+    frageZeichnen();
+    zeige("test");
+  });
+  el("name").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") el("starten").click();
+  });
   el("weiter").addEventListener("click", weiter);
   el("nochmal").addEventListener("click", neustart);
+  el("urkunde-zeigen").addEventListener("click", urkundeZeichnen);
+  el("urkunde-zurueck").addEventListener("click", () => zeige("ergebnis"));
+  el("urkunde-drucken").addEventListener("click", () => window.print());
 })();

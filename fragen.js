@@ -1,217 +1,381 @@
-// 33 Fragen nach Vorbild des Tests "Leben in Deutschland":
-// 30 allgemeine Fragen + 3 Fragen zum Bundesland Hamburg.
-// Bestanden ab 17 richtigen Antworten.
-// Hinweis: aus dem offiziellen Fragenkatalog zusammengestellt, ohne amtliche Gewähr.
+// 33 Fragen aus dem offiziellen Gesamtfragenkatalog des BAMF zum Test
+// "Leben in Deutschland" und zum "Einbürgerungstest", Stand 07.05.2025.
+// Fragen und Antwortoptionen wortgleich aus dem Katalog übernommen.
+// Quelle: https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf
+//
+// 30 allgemeine Fragen + 3 Fragen zum Bundesland Hamburg, bewusst aus dem
+// schwereren Teil des Katalogs gewählt. Bestanden ab 17 richtigen Antworten.
+//
+// Hinweis: Der BAMF-Katalog enthält keinen Lösungsschlüssel. Die als richtig
+// markierte Option wurde fachlich bestimmt, nicht amtlich übernommen.
 
 const FRAGEN = [
   {
-    frage: "Wie heißt die deutsche Verfassung?",
-    optionen: ["Grundgesetz", "Bundesverfassung", "Verfassungsvertrag", "Bundesgesetzbuch"],
-    richtig: 0
-  },
-  {
-    frage: "Wie viele Bundesländer hat Deutschland?",
-    optionen: ["12", "14", "16", "18"],
-    richtig: 2
-  },
-  {
-    frage: "Welche Farben hat die deutsche Flagge?",
-    optionen: ["schwarz, rot, gold", "schwarz, rot, grün", "blau, weiß, rot", "schwarz, gelb, rot"],
-    richtig: 0
-  },
-  {
-    frage: "Wann wurde die Bundesrepublik Deutschland gegründet?",
-    optionen: ["1919", "1945", "1949", "1990"],
-    richtig: 2
-  },
-  {
-    frage: "Wer wählt in Deutschland die Bundeskanzlerin oder den Bundeskanzler?",
-    optionen: ["das Volk direkt", "der Bundestag", "der Bundesrat", "die Bundesversammlung"],
-    richtig: 1
-  },
-  {
-    frage: "Wer ernennt in Deutschland die Ministerinnen und Minister der Bundesregierung?",
-    optionen: ["der Bundestag", "das Bundesverfassungsgericht", "die Bundespräsidentin oder der Bundespräsident", "der Bundesrat"],
-    richtig: 2
-  },
-  {
-    frage: "Alle wie viele Jahre wird der Deutsche Bundestag gewählt?",
-    optionen: ["alle 3 Jahre", "alle 4 Jahre", "alle 5 Jahre", "alle 6 Jahre"],
-    richtig: 1
-  },
-  {
-    frage: "Wie viele Stimmen hat man bei einer Bundestagswahl?",
-    optionen: ["eine Stimme", "zwei Stimmen", "drei Stimmen", "so viele wie Parteien antreten"],
-    richtig: 1
-  },
-  {
-    frage: "Ab welchem Alter darf man in Deutschland den Bundestag wählen?",
-    optionen: ["ab 16", "ab 18", "ab 21", "ab 25"],
-    richtig: 1
-  },
-  {
-    frage: "Wann ist der Tag der Deutschen Einheit?",
-    optionen: ["1. Mai", "17. Juni", "3. Oktober", "9. November"],
-    richtig: 2
-  },
-  {
-    frage: "Was bedeutet \"Rechtsstaat\" in Deutschland?",
+    frage: "Welches Grundrecht gilt in Deutschland nur für Ausländerinnen/Ausländer? Das Grundrecht auf …",
     optionen: [
-      "Der Staat steht über dem Gesetz.",
-      "Alle müssen sich an die Gesetze halten, auch der Staat selbst.",
-      "Nur Gerichte müssen sich an Gesetze halten.",
-      "Das Recht wird von der Regierung frei ausgelegt."
+      "Schutz der Familie",
+      "Menschenwürde",
+      "Asyl",
+      "Meinungsfreiheit",
     ],
-    richtig: 1
+    richtig: 2,
+    quelle: "Allgemein/8"
   },
   {
-    frage: "Welches Recht gehört zu den Grundrechten in Deutschland?",
-    optionen: ["Recht auf Arbeit", "Meinungsfreiheit", "Recht auf eine Wohnung", "Recht auf ein Auto"],
-    richtig: 1
-  },
-  {
-    frage: "In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil …",
+    frage: "Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert?",
     optionen: [
-      "hier Meinungsfreiheit gilt.",
-      "die Menschen Steuern zahlen.",
-      "die Regierung das erlaubt hat.",
-      "hier Religionsfreiheit gilt."
+      "die Unantastbarkeit der Menschenwürde",
+      "das Recht auf Leben",
+      "Religionsfreiheit",
+      "Meinungsfreiheit",
     ],
-    richtig: 0
-  },
-  {
-    frage: "Was ist Deutschland nicht?",
-    optionen: ["eine Demokratie", "ein Rechtsstaat", "eine Monarchie", "ein Sozialstaat"],
-    richtig: 2
-  },
-  {
-    frage: "Die Bundesrepublik Deutschland ist ein demokratischer und … Bundesstaat.",
-    optionen: ["sozialer", "sozialistischer", "liberaler", "konservativer"],
-    richtig: 0
-  },
-  {
-    frage: "Welche drei Bundesländer sind Stadtstaaten?",
-    optionen: [
-      "Hamburg, Bremen, Berlin",
-      "Hamburg, München, Berlin",
-      "Bremen, Köln, Berlin",
-      "Hamburg, Bremen, Hannover"
-    ],
-    richtig: 0
-  },
-  {
-    frage: "Was ist keine Aufgabe der Bundespräsidentin oder des Bundespräsidenten?",
-    optionen: [
-      "Gesetze unterzeichnen",
-      "das Land im Ausland vertreten",
-      "die Regierungspolitik bestimmen",
-      "Orden verleihen"
-    ],
-    richtig: 2
-  },
-  {
-    frage: "Was ist keine staatliche Gewalt in Deutschland?",
-    optionen: ["die Gesetzgebung", "die Rechtsprechung", "die vollziehende Gewalt", "die Wirtschaft"],
-    richtig: 3
-  },
-  {
-    frage: "Wer beschließt in Deutschland die Bundesgesetze?",
-    optionen: ["die Bundesregierung allein", "der Bundestag", "das Bundesverfassungsgericht", "die Bundespräsidentin"],
-    richtig: 1
-  },
-  {
-    frage: "Welche Aufgabe hat der Bundesrat?",
-    optionen: [
-      "Er wählt den Bundeskanzler.",
-      "Die Bundesländer wirken an der Gesetzgebung des Bundes mit.",
-      "Er überwacht die Gerichte.",
-      "Er beschließt den Haushalt allein."
-    ],
-    richtig: 1
-  },
-  {
-    frage: "Was bedeutet \"Volkssouveränität\"?",
-    optionen: [
-      "Alle Staatsgewalt geht vom Volke aus.",
-      "Der Bundespräsident bestimmt allein.",
-      "Das Volk zahlt die Steuern.",
-      "Ein König herrscht über das Volk."
-    ],
-    richtig: 0
-  },
-  {
-    frage: "Was ist das höchste Gericht in Deutschland?",
-    optionen: ["der Bundesgerichtshof", "das Bundesverfassungsgericht", "das Landgericht", "der Europäische Gerichtshof"],
-    richtig: 1
-  },
-  {
-    frage: "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
-    optionen: ["Willy Brandt", "Helmut Schmidt", "Konrad Adenauer", "Ludwig Erhard"],
-    richtig: 2
-  },
-  {
-    frage: "Wann fiel die Berliner Mauer?",
-    optionen: ["1961", "1987", "1989", "1990"],
-    richtig: 2
-  },
-  {
-    frage: "Was geschah am 17. Juni 1953 in der DDR?",
-    optionen: ["Gründung der DDR", "Volksaufstand", "Bau der Mauer", "Beitritt zur NATO"],
-    richtig: 1
-  },
-  {
-    frage: "Wie heißt die Nationalhymne der Bundesrepublik Deutschland?",
-    optionen: [
-      "\"Die Wacht am Rhein\"",
-      "\"Das Lied der Deutschen\"",
-      "\"Auferstanden aus Ruinen\"",
-      "\"Deutschland über alles\""
-    ],
-    richtig: 1
-  },
-  {
-    frage: "Wofür steht die Abkürzung EU?",
-    optionen: ["Europäische Union", "Europäisches Übereinkommen", "Einheit und Unabhängigkeit", "Europäische Urkunde"],
-    richtig: 0
-  },
-  {
-    frage: "Wer bestimmt in Deutschland überwiegend die Schulpolitik?",
-    optionen: ["der Bund", "die Bundesländer", "die Europäische Union", "die Gemeinden"],
-    richtig: 1
-  },
-  {
-    frage: "Bei welcher Behörde meldet man in Deutschland seinen Wohnsitz an?",
-    optionen: ["beim Finanzamt", "beim Einwohnermeldeamt", "beim Arbeitsamt", "beim Ordnungsamt"],
-    richtig: 1
-  },
-  {
-    frage: "Wie viele Fragen muss man im echten Einbürgerungstest richtig beantworten, um zu bestehen?",
-    optionen: ["12 von 33", "15 von 33", "17 von 33", "22 von 33"],
-    richtig: 2
-  },
-  {
-    frage: "Hamburg: Wie heißt das Landesparlament?",
-    optionen: ["Landtag", "Hamburgische Bürgerschaft", "Abgeordnetenhaus", "Senat"],
-    richtig: 1,
-    land: true
-  },
-  {
-    frage: "Hamburg: Wie heißt die Regierung des Bundeslandes?",
-    optionen: ["Senat", "Kabinett", "Magistrat", "Staatsrat"],
     richtig: 0,
-    land: true
+    quelle: "Allgemein/17"
   },
   {
-    frage: "Hamburg: Wie wird die Regierungschefin oder der Regierungschef genannt?",
+    frage: "Wann kann in Deutschland eine Partei verboten werden?",
     optionen: [
-      "Ministerpräsidentin oder Ministerpräsident",
-      "Erste Bürgermeisterin oder Erster Bürgermeister",
-      "Landeshauptfrau oder Landeshauptmann",
-      "Senatspräsidentin oder Senatspräsident"
+      "wenn ihr Wahlkampf zu teuer ist",
+      "wenn sie gegen die Verfassung kämpft",
+      "wenn sie Kritik am Staatsoberhaupt äußert",
+      "wenn ihr Programm eine neue Richtung vorschlägt",
     ],
     richtig: 1,
-    land: true
-  }
+    quelle: "Allgemein/40"
+  },
+  {
+    frage: "Welches Organ gehört nicht zu den Verfassungsorganen Deutschlands?",
+    optionen: [
+      "der Bundesrat",
+      "die Bundespräsidentin/der Bundespräsident",
+      "die Bürgerversammlung",
+      "die Regierung",
+    ],
+    richtig: 2,
+    quelle: "Allgemein/45"
+  },
+  {
+    frage: "Wer wird meistens zur Präsidentin/zum Präsidenten des Deutschen Bundestages gewählt?",
+    optionen: [
+      "die/der älteste Abgeordnete im Parlament",
+      "die Ministerpräsidentin/der Ministerpräsident des größten Bundeslandes",
+      "eine ehemalige Bundeskanzlerin/ein ehemaliger Bundeskanzler",
+      "eine Abgeordnete/ein Abgeordneter der stärksten Fraktion",
+    ],
+    richtig: 3,
+    quelle: "Allgemein/52"
+  },
+  {
+    frage: "Was gehört in Deutschland nicht zur Exekutive?",
+    optionen: [
+      "die Polizei",
+      "die Gerichte",
+      "das Finanzamt",
+      "die Ministerien",
+    ],
+    richtig: 1,
+    quelle: "Allgemein/56"
+  },
+  {
+    frage: "Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie heißt die unterste politische Stufe?",
+    optionen: [
+      "Stadträte",
+      "Landräte",
+      "Gemeinden",
+      "Bezirksämter",
+    ],
+    richtig: 2,
+    quelle: "Allgemein/61"
+  },
+  {
+    frage: "Welches Gericht in Deutschland ist zuständig für die Auslegung des Grundgesetzes?",
+    optionen: [
+      "Oberlandesgericht",
+      "Amtsgericht",
+      "Bundesverfassungsgericht",
+      "Verwaltungsgericht",
+    ],
+    richtig: 2,
+    quelle: "Allgemein/71"
+  },
+  {
+    frage: "Wer wählt in Deutschland die Bundespräsidentin/den Bundespräsidenten?",
+    optionen: [
+      "die Bundesversammlung",
+      "der Bundesrat",
+      "das Bundesparlament",
+      "das Bundesverfassungsgericht",
+    ],
+    richtig: 0,
+    quelle: "Allgemein/74"
+  },
+  {
+    frage: "Die deutschen Bundesländer wirken an der Gesetzgebung des Bundes mit durch …",
+    optionen: [
+      "den Bundesrat.",
+      "die Bundesversammlung.",
+      "den Bundestag.",
+      "die Bundesregierung.",
+    ],
+    richtig: 0,
+    quelle: "Allgemein/78"
+  },
+  {
+    frage: "Was gehört nicht zur gesetzlichen Sozialversicherung?",
+    optionen: [
+      "die Lebensversicherung",
+      "die gesetzliche Rentenversicherung",
+      "die Arbeitslosenversicherung",
+      "die Pflegeversicherung",
+    ],
+    richtig: 0,
+    quelle: "Allgemein/87"
+  },
+  {
+    frage: "Wie viel Prozent der Zweitstimmen müssen Parteien mindestens bekommen, um in den Deutschen Bundestag gewählt zu werden?",
+    optionen: [
+      "3%",
+      "4%",
+      "5%",
+      "6%",
+    ],
+    richtig: 2,
+    quelle: "Allgemein/103"
+  },
+  {
+    frage: "Was macht eine Schöffin/ein Schöffe in Deutschland? Sie/Er …",
+    optionen: [
+      "entscheidet mit Richterinnen/Richtern über Schuld und Strafe.",
+      "gibt Bürgerinnen/Bürgern rechtlichen Rat.",
+      "stellt Urkunden aus.",
+      "verteidigt die Angeklagte/den Angeklagten.",
+    ],
+    richtig: 0,
+    quelle: "Allgemein/121"
+  },
+  {
+    frage: "Claus Schenk Graf von Stauffenberg wurde bekannt durch …",
+    optionen: [
+      "eine Goldmedaille bei den Olympischen Spielen 1936.",
+      "den Bau des Reichstagsgebäudes.",
+      "den Aufbau der Wehrmacht.",
+      "das Attentat auf Hitler am 20. Juli 1944.",
+    ],
+    richtig: 3,
+    quelle: "Allgemein/142"
+  },
+  {
+    frage: "In welchem Jahr zerstörten die Nationalsozialisten Synagogen und jüdische Geschäfte in Deutschland?",
+    optionen: [
+      "1925",
+      "1930",
+      "1938",
+      "1945",
+    ],
+    richtig: 2,
+    quelle: "Allgemein/143"
+  },
+  {
+    frage: "Welches Land war keine \"Alliierte Besatzungsmacht\" in Deutschland?",
+    optionen: [
+      "USA",
+      "Sowjetunion",
+      "Frankreich",
+      "Japan",
+    ],
+    richtig: 3,
+    quelle: "Allgemein/148"
+  },
+  {
+    frage: "In welcher Besatzungszone wurde die DDR gegründet? In der …",
+    optionen: [
+      "amerikanischen Besatzungszone",
+      "französischen Besatzungszone",
+      "britischen Besatzungszone",
+      "sowjetischen Besatzungszone",
+    ],
+    richtig: 3,
+    quelle: "Allgemein/152"
+  },
+  {
+    frage: "Vom Juni 1948 bis zum Mai 1949 wurden die Bürgerinnen und Bürger von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?",
+    optionen: [
+      "Für Frankreich war eine Versorgung der West-Berliner Bevölkerung mit dem Flugzeug kostengünstiger.",
+      "Die amerikanischen Soldatinnen und Soldaten hatten beim Landtransport Angst vor Überfällen.",
+      "Für Großbritannien war die Versorgung über die Luftbrücke schneller.",
+      "Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege.",
+    ],
+    richtig: 3,
+    quelle: "Allgemein/158"
+  },
+  {
+    frage: "Wann war in der Bundesrepublik Deutschland das \"Wirtschaftswunder\"?",
+    optionen: [
+      "40er Jahre",
+      "50er Jahre",
+      "70er Jahre",
+      "80er Jahre",
+    ],
+    richtig: 1,
+    quelle: "Allgemein/161"
+  },
+  {
+    frage: "Wofür stand der Ausdruck \"Eiserner Vorhang\"? Für die Abschottung …",
+    optionen: [
+      "des Warschauer Pakts gegen den Westen",
+      "Norddeutschlands gegen Süddeutschland",
+      "Nazi-Deutschlands gegen die Alliierten",
+      "Europas gegen die USA",
+    ],
+    richtig: 0,
+    quelle: "Allgemein/162"
+  },
+  {
+    frage: "Im Jahr 1953 gab es in der DDR einen Aufstand, an den lange Zeit in der Bundesrepublik Deutschland ein Feiertag erinnerte. Wann war das?",
+    optionen: [
+      "1. Mai",
+      "17. Juni",
+      "20. Juli",
+      "9. November",
+    ],
+    richtig: 1,
+    quelle: "Allgemein/163"
+  },
+  {
+    frage: "Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?",
+    optionen: [
+      "Preußen",
+      "Bundesrepublik Deutschland",
+      "\"Drittes Reich\"",
+      "DDR",
+    ],
+    richtig: 3,
+    quelle: "Allgemein/164"
+  },
+  {
+    frage: "Mit der Abkürzung \"Stasi\" meinte man in der DDR …",
+    optionen: [
+      "das Parlament.",
+      "das Ministerium für Staatssicherheit.",
+      "eine regierende Partei.",
+      "das Ministerium für Volksbildung.",
+    ],
+    richtig: 1,
+    quelle: "Allgemein/176"
+  },
+  {
+    frage: "In welchem Militärbündnis war die DDR Mitglied?",
+    optionen: [
+      "in der NATO",
+      "im Rheinbund",
+      "im Warschauer Pakt",
+      "im Europabündnis",
+    ],
+    richtig: 2,
+    quelle: "Allgemein/183"
+  },
+  {
+    frage: "Welcher Politiker steht für die \"Ostverträge\"?",
+    optionen: [
+      "Helmut Kohl",
+      "Willy Brandt",
+      "Michail Gorbatschow",
+      "Ludwig Erhard",
+    ],
+    richtig: 1,
+    quelle: "Allgemein/187"
+  },
+  {
+    frage: "Wer wird als \"Kanzler der Deutschen Einheit\" bezeichnet?",
+    optionen: [
+      "Gerhard Schröder",
+      "Helmut Kohl",
+      "Konrad Adenauer",
+      "Helmut Schmidt",
+    ],
+    richtig: 1,
+    quelle: "Allgemein/191"
+  },
+  {
+    frage: "Der 27. Januar ist in Deutschland ein offizieller Gedenktag. Woran erinnert dieser Tag?",
+    optionen: [
+      "an das Ende des Zweiten Weltkrieges",
+      "an die Verabschiedung des Grundgesetzes",
+      "an die Wiedervereinigung Deutschlands",
+      "an die Opfer des Nationalsozialismus (Tag der Befreiung des Vernichtungslagers Auschwitz)",
+    ],
+    richtig: 3,
+    quelle: "Allgemein/194"
+  },
+  {
+    frage: "2007 wurde das 50-jährige Jubiläum der \"Römischen Verträge\" gefeiert. Was war der Inhalt der Verträge?",
+    optionen: [
+      "Beitritt Deutschlands zur NATO",
+      "Gründung der Europäischen Wirtschaftsgemeinschaft (EWG)",
+      "Verpflichtung Deutschlands zu Reparationsleistungen",
+      "Festlegung der Oder-Neiße-Linie als Ostgrenze",
+    ],
+    richtig: 1,
+    quelle: "Allgemein/210"
+  },
+  {
+    frage: "Wann beginnt die gesetzliche Nachtruhe in Deutschland?",
+    optionen: [
+      "wenn die Sonne untergeht",
+      "wenn die Nachbarn schlafen gehen",
+      "um 0 Uhr, Mitternacht",
+      "um 22 Uhr",
+    ],
+    richtig: 3,
+    quelle: "Allgemein/239"
+  },
+  {
+    frage: "Welches Ehrenamt müssen deutsche Staatsbürgerinnen und Staatsbürger übernehmen, wenn sie dazu aufgefordert werden?",
+    optionen: [
+      "Vereinstrainerin/Vereinstrainer",
+      "Wahlhelferin/Wahlhelfer",
+      "Bibliotheksaufsicht",
+      "Lehrerin/Lehrer",
+    ],
+    richtig: 1,
+    quelle: "Allgemein/255"
+  },
+  {
+    frage: "Für wie viele Jahre wird das Landesparlament in Hamburg gewählt?",
+    optionen: [
+      "3",
+      "4",
+      "5",
+      "6",
+    ],
+    richtig: 2,
+    land: true,
+    quelle: "Hamburg/1"
+  },
+  {
+    frage: "Ab welchem Alter darf man in Hamburg bei Kommunalwahlen (Wahl der Bezirksversammlungen) wählen?",
+    optionen: [
+      "14",
+      "16",
+      "18",
+      "20",
+    ],
+    richtig: 1,
+    land: true,
+    quelle: "Hamburg/2"
+  },
+  {
+    frage: "Welche Senatorin/welchen Senator hat Hamburg nicht?",
+    optionen: [
+      "Justizsenatorin/Justizsenator",
+      "Senatorin/Senator für Außenbeziehungen",
+      "Finanzsenatorin/Finanzsenator",
+      "Innensenatorin/Innensenator",
+    ],
+    richtig: 1,
+    land: true,
+    quelle: "Hamburg/7"
+  },
 ];
 
 const BESTEHENSGRENZE = 17;

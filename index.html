@@ -6,7 +6,7 @@
 <title>Einbürgerungstest</title>
 <meta name="description" content="Einbürgerungstest zum Selbermachen: 33 Fragen, bestanden ab 17 richtigen Antworten.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🥔</text></svg>">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -25,7 +25,8 @@
       <p>Der Test besteht aus <strong>33 Fragen</strong>. Davon beziehen sich 30 Fragen
       auf allgemeine Kenntnisse der Rechts- und Gesellschaftsordnung sowie der
       Lebensverhältnisse in Deutschland; 3 Fragen betreffen das Bundesland
-      <strong>Hamburg</strong>.</p>
+      <strong>Hamburg</strong>. Sämtliche Fragen entstammen dem amtlichen
+      Fragenkatalog.</p>
       <p>Zu jeder Frage werden Ihnen vier Antworten vorgelegt. Genau eine Antwort
       ist richtig. Eine Zeitbegrenzung besteht nicht. Hilfsmittel sind nicht
       zugelassen; wir vertrauen insoweit auf Ihre Redlichkeit.</p>
@@ -35,6 +36,14 @@
       übermittelt oder gespeichert.</p>
       <p>Wir wünschen Ihnen viel Erfolg.</p>
     </div>
+
+    <label class="feld">
+      <span class="feld-titel">Name der Antragstellerin / des Antragstellers</span>
+      <input id="name" type="text" maxlength="40" autocomplete="name"
+             placeholder="Vor- und Nachname" enterkeyhint="go">
+      <span class="feld-hinweis">Wird für die Kartoffelurkunde benötigt und verlässt dieses Gerät nicht.
+      Ohne Angabe bleibt auf der Urkunde eine Linie zum Eintragen von Hand.</span>
+    </label>
 
     <button id="starten" class="knopf-gross">Test beginnen</button>
   </section>
@@ -65,6 +74,8 @@
 
     <div id="schluss" class="förmlich"></div>
 
+    <button id="urkunde-zeigen" class="knopf-gross">🥔 Kartoffelurkunde ausstellen</button>
+
     <details class="auswertung">
       <summary>Alle 33 Fragen mit den richtigen Antworten anzeigen</summary>
       <ol id="auswertungsliste"></ol>
@@ -73,13 +84,50 @@
     <button id="nochmal" class="knopf-gross knopf-leise">Test wiederholen</button>
   </section>
 
+  <!-- Urkunde -->
+  <section id="urkunde-seite" hidden>
+    <article id="urkunde" class="urkunde">
+      <div class="u-rahmen">
+        <p class="u-behoerde">Freie und Hansestadt Hamburg<br>Prüfungsstelle Kartoffelparty</p>
+        <h1 class="u-titel">Kartoffelurkunde</h1>
+        <p class="u-unter">Amtliche Bestätigung über die Teilnahme am Einbürgerungstest</p>
+
+        <p class="u-satz">Hiermit wird bescheinigt, dass</p>
+        <p id="u-name" class="u-name"></p>
+        <p id="u-fliesstext" class="u-satz u-fliess"></p>
+
+        <p id="u-urteil" class="u-urteil"></p>
+        <p id="u-nachsatz" class="u-satz u-fliess"></p>
+
+        <div class="u-fuss">
+          <div>
+            <p id="u-ort" class="u-klein"></p>
+            <p id="u-akte" class="u-klein"></p>
+          </div>
+          <div class="u-siegel" aria-hidden="true">
+            <span>🥔</span>
+            <small>Prüfungsstelle<br>Kartoffelparty</small>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="u-knoepfe">
+      <button id="urkunde-drucken" class="knopf-gross">Urkunde drucken oder als PDF sichern</button>
+      <button id="urkunde-zurueck" class="knopf-gross knopf-leise">Zurück zum Ergebnis</button>
+    </div>
+  </section>
+
 </main>
 
 <footer>
-  Kein amtlicher Test. Zusammengestellt nach Vorbild des Tests „Leben in Deutschland“.
+  Fragen und Antwortmöglichkeiten wortgleich aus dem
+  <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf">Gesamtfragenkatalog des BAMF</a>
+  zum Test „Leben in Deutschland“ und zum „Einbürgerungstest“, Stand 07.05.2025.
+  Kein amtlicher Test, ohne Gewähr.
 </footer>
 
-<script src="fragen.js"></script>
-<script src="quiz.js"></script>
+<script src="fragen.js?v=4"></script>
+<script src="quiz.js?v=4"></script>
 </body>
 </html>
