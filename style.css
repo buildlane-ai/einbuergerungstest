@@ -201,10 +201,37 @@ h2 { margin: 6px 0 20px; font-size: 22px; line-height: 1.35; }
 .u-knoepfe { margin-top: 8px; }
 
 @media print {
-  body { background: #fff; padding: 0; }
+  @page { size: A4 portrait; margin: 10mm; }
+
+  html, body { height: auto; }
+  body { background: #fff; padding: 0; margin: 0; font-size: 10pt; }
+  #app { max-width: none; margin: 0; }
   footer, .u-knoepfe { display: none !important; }
-  .urkunde { border: 0; box-shadow: none; }
-  #urkunde-seite { page-break-inside: avoid; }
+
+  #urkunde-seite { break-inside: avoid; page-break-inside: avoid; }
+  .urkunde { border: 0; box-shadow: none; padding: 0; background: #fff; }
+  .u-rahmen { padding: 13mm 12mm 10mm; break-inside: avoid; page-break-inside: avoid; }
+
+  .u-behoerde { margin-bottom: 8mm; font-size: 8.5pt; line-height: 1.45; }
+  .u-behoerde-zeile2 { font-size: 7pt; }
+  .u-titel { font-size: 31pt; }
+  .u-unter { margin: 2mm 0 9mm; font-size: 10.5pt; }
+  .u-satz { font-size: 11pt; }
+  .u-fliess { margin-bottom: 6mm; max-width: 52ch; line-height: 1.5; }
+  .u-name { margin: 4mm 0 6mm; padding-bottom: 3mm; font-size: 19pt; }
+  .u-urteil { margin: 2mm 0 7mm; padding: 2.5mm 8mm; font-size: 14pt; border-width: 2px; }
+
+  .u-paragraphen { margin: 6mm 0 0; }
+  .u-paragraph { margin-bottom: 4.5mm; break-inside: avoid; page-break-inside: avoid; }
+  .u-paragraph-titel { font-size: 9.5pt; }
+  .u-paragraph-text { font-size: 9pt; line-height: 1.4; }
+
+  .u-fuss { margin-top: 8mm; padding-top: 4mm; }
+  .u-klein { font-size: 8.5pt; }
+  .u-siegel { width: 23mm; height: 23mm; }
+  .u-siegel span { font-size: 15pt; }
+  .u-siegel small { font-size: 5pt; }
+  .u-maschinell { margin-top: 6mm; padding-top: 3mm; font-size: 7.5pt; }
 }
 
 footer {
