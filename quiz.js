@@ -214,4 +214,27 @@
   el("urkunde-zeigen").addEventListener("click", urkundeZeichnen);
   el("urkunde-zurueck").addEventListener("click", () => zeige("ergebnis"));
   el("urkunde-drucken").addEventListener("click", () => window.print());
+
+  // Vorschau zum Prüfen, ohne alle 33 Fragen auszufüllen:
+  //   ?demo=28              → Ergebnisseite mit 28 richtigen Antworten
+  //   &name=Marianna        → Name für die Urkunde
+  //   &urkunde=1            → springt direkt auf die Urkunde
+  (function vorschau() {
+    const p = new URLSearchParams(location.search);
+    if (!p.has("demo")) return;
+
+    const gewuenscht = parseInt(p.get("demo"), 10);
+    const anzahl = Math.max(0, Math.min(FRAGEN.length, isNaN(gewuenscht) ? 0 : gewuenscht));
+
+    teilnehmer = (p.get("name") || "").trim().replace(/\s+/g, " ");
+    el("name").value = teilnehmer;
+
+    FRAGEN.forEach((f, i) => {
+      antworten[i] = i < anzahl ? f.richtig : (f.richtig + 1) % 4;
+    });
+    index = FRAGEN.length;
+
+    auswerten();
+    if (p.get("urkunde") === "1") urkundeZeichnen();
+  })();
 })();
