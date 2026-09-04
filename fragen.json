@@ -1,0 +1,371 @@
+{
+ "bestehensgrenze": 17,
+ "fragen": [
+  {
+   "frage": "Welches Grundrecht gilt in Deutschland nur für Ausländerinnen/Ausländer? Das Grundrecht auf …",
+   "optionen": [
+    "Schutz der Familie",
+    "Menschenwürde",
+    "Asyl",
+    "Meinungsfreiheit"
+   ],
+   "richtig": 2,
+   "quelle": "Allgemein/8"
+  },
+  {
+   "frage": "Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert?",
+   "optionen": [
+    "die Unantastbarkeit der Menschenwürde",
+    "das Recht auf Leben",
+    "Religionsfreiheit",
+    "Meinungsfreiheit"
+   ],
+   "richtig": 0,
+   "quelle": "Allgemein/17"
+  },
+  {
+   "frage": "Wann kann in Deutschland eine Partei verboten werden?",
+   "optionen": [
+    "wenn ihr Wahlkampf zu teuer ist",
+    "wenn sie gegen die Verfassung kämpft",
+    "wenn sie Kritik am Staatsoberhaupt äußert",
+    "wenn ihr Programm eine neue Richtung vorschlägt"
+   ],
+   "richtig": 1,
+   "quelle": "Allgemein/40"
+  },
+  {
+   "frage": "Welches Organ gehört nicht zu den Verfassungsorganen Deutschlands?",
+   "optionen": [
+    "der Bundesrat",
+    "die Bundespräsidentin/der Bundespräsident",
+    "die Bürgerversammlung",
+    "die Regierung"
+   ],
+   "richtig": 2,
+   "quelle": "Allgemein/45"
+  },
+  {
+   "frage": "Wer wird meistens zur Präsidentin/zum Präsidenten des Deutschen Bundestages gewählt?",
+   "optionen": [
+    "die/der älteste Abgeordnete im Parlament",
+    "die Ministerpräsidentin/der Ministerpräsident des größten Bundeslandes",
+    "eine ehemalige Bundeskanzlerin/ein ehemaliger Bundeskanzler",
+    "eine Abgeordnete/ein Abgeordneter der stärksten Fraktion"
+   ],
+   "richtig": 3,
+   "quelle": "Allgemein/52"
+  },
+  {
+   "frage": "Was gehört in Deutschland nicht zur Exekutive?",
+   "optionen": [
+    "die Polizei",
+    "die Gerichte",
+    "das Finanzamt",
+    "die Ministerien"
+   ],
+   "richtig": 1,
+   "quelle": "Allgemein/56"
+  },
+  {
+   "frage": "Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie heißt die unterste politische Stufe?",
+   "optionen": [
+    "Stadträte",
+    "Landräte",
+    "Gemeinden",
+    "Bezirksämter"
+   ],
+   "richtig": 2,
+   "quelle": "Allgemein/61"
+  },
+  {
+   "frage": "Welches Gericht in Deutschland ist zuständig für die Auslegung des Grundgesetzes?",
+   "optionen": [
+    "Oberlandesgericht",
+    "Amtsgericht",
+    "Bundesverfassungsgericht",
+    "Verwaltungsgericht"
+   ],
+   "richtig": 2,
+   "quelle": "Allgemein/71"
+  },
+  {
+   "frage": "Wer wählt in Deutschland die Bundespräsidentin/den Bundespräsidenten?",
+   "optionen": [
+    "die Bundesversammlung",
+    "der Bundesrat",
+    "das Bundesparlament",
+    "das Bundesverfassungsgericht"
+   ],
+   "richtig": 0,
+   "quelle": "Allgemein/74"
+  },
+  {
+   "frage": "Die deutschen Bundesländer wirken an der Gesetzgebung des Bundes mit durch …",
+   "optionen": [
+    "den Bundesrat.",
+    "die Bundesversammlung.",
+    "den Bundestag.",
+    "die Bundesregierung."
+   ],
+   "richtig": 0,
+   "quelle": "Allgemein/78"
+  },
+  {
+   "frage": "Was gehört nicht zur gesetzlichen Sozialversicherung?",
+   "optionen": [
+    "die Lebensversicherung",
+    "die gesetzliche Rentenversicherung",
+    "die Arbeitslosenversicherung",
+    "die Pflegeversicherung"
+   ],
+   "richtig": 0,
+   "quelle": "Allgemein/87"
+  },
+  {
+   "frage": "Wie viel Prozent der Zweitstimmen müssen Parteien mindestens bekommen, um in den Deutschen Bundestag gewählt zu werden?",
+   "optionen": [
+    "3%",
+    "4%",
+    "5%",
+    "6%"
+   ],
+   "richtig": 2,
+   "quelle": "Allgemein/103"
+  },
+  {
+   "frage": "Was macht eine Schöffin/ein Schöffe in Deutschland? Sie/Er …",
+   "optionen": [
+    "entscheidet mit Richterinnen/Richtern über Schuld und Strafe.",
+    "gibt Bürgerinnen/Bürgern rechtlichen Rat.",
+    "stellt Urkunden aus.",
+    "verteidigt die Angeklagte/den Angeklagten."
+   ],
+   "richtig": 0,
+   "quelle": "Allgemein/121"
+  },
+  {
+   "frage": "Claus Schenk Graf von Stauffenberg wurde bekannt durch …",
+   "optionen": [
+    "eine Goldmedaille bei den Olympischen Spielen 1936.",
+    "den Bau des Reichstagsgebäudes.",
+    "den Aufbau der Wehrmacht.",
+    "das Attentat auf Hitler am 20. Juli 1944."
+   ],
+   "richtig": 3,
+   "quelle": "Allgemein/142"
+  },
+  {
+   "frage": "In welchem Jahr zerstörten die Nationalsozialisten Synagogen und jüdische Geschäfte in Deutschland?",
+   "optionen": [
+    "1925",
+    "1930",
+    "1938",
+    "1945"
+   ],
+   "richtig": 2,
+   "quelle": "Allgemein/143"
+  },
+  {
+   "frage": "Welches Land war keine \"Alliierte Besatzungsmacht\" in Deutschland?",
+   "optionen": [
+    "USA",
+    "Sowjetunion",
+    "Frankreich",
+    "Japan"
+   ],
+   "richtig": 3,
+   "quelle": "Allgemein/148"
+  },
+  {
+   "frage": "In welcher Besatzungszone wurde die DDR gegründet? In der …",
+   "optionen": [
+    "amerikanischen Besatzungszone",
+    "französischen Besatzungszone",
+    "britischen Besatzungszone",
+    "sowjetischen Besatzungszone"
+   ],
+   "richtig": 3,
+   "quelle": "Allgemein/152"
+  },
+  {
+   "frage": "Vom Juni 1948 bis zum Mai 1949 wurden die Bürgerinnen und Bürger von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?",
+   "optionen": [
+    "Für Frankreich war eine Versorgung der West-Berliner Bevölkerung mit dem Flugzeug kostengünstiger.",
+    "Die amerikanischen Soldatinnen und Soldaten hatten beim Landtransport Angst vor Überfällen.",
+    "Für Großbritannien war die Versorgung über die Luftbrücke schneller.",
+    "Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege."
+   ],
+   "richtig": 3,
+   "quelle": "Allgemein/158"
+  },
+  {
+   "frage": "Wann war in der Bundesrepublik Deutschland das \"Wirtschaftswunder\"?",
+   "optionen": [
+    "40er Jahre",
+    "50er Jahre",
+    "70er Jahre",
+    "80er Jahre"
+   ],
+   "richtig": 1,
+   "quelle": "Allgemein/161"
+  },
+  {
+   "frage": "Wofür stand der Ausdruck \"Eiserner Vorhang\"? Für die Abschottung …",
+   "optionen": [
+    "des Warschauer Pakts gegen den Westen",
+    "Norddeutschlands gegen Süddeutschland",
+    "Nazi-Deutschlands gegen die Alliierten",
+    "Europas gegen die USA"
+   ],
+   "richtig": 0,
+   "quelle": "Allgemein/162"
+  },
+  {
+   "frage": "Im Jahr 1953 gab es in der DDR einen Aufstand, an den lange Zeit in der Bundesrepublik Deutschland ein Feiertag erinnerte. Wann war das?",
+   "optionen": [
+    "1. Mai",
+    "17. Juni",
+    "20. Juli",
+    "9. November"
+   ],
+   "richtig": 1,
+   "quelle": "Allgemein/163"
+  },
+  {
+   "frage": "Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?",
+   "optionen": [
+    "Preußen",
+    "Bundesrepublik Deutschland",
+    "\"Drittes Reich\"",
+    "DDR"
+   ],
+   "richtig": 3,
+   "quelle": "Allgemein/164"
+  },
+  {
+   "frage": "Mit der Abkürzung \"Stasi\" meinte man in der DDR …",
+   "optionen": [
+    "das Parlament.",
+    "das Ministerium für Staatssicherheit.",
+    "eine regierende Partei.",
+    "das Ministerium für Volksbildung."
+   ],
+   "richtig": 1,
+   "quelle": "Allgemein/176"
+  },
+  {
+   "frage": "In welchem Militärbündnis war die DDR Mitglied?",
+   "optionen": [
+    "in der NATO",
+    "im Rheinbund",
+    "im Warschauer Pakt",
+    "im Europabündnis"
+   ],
+   "richtig": 2,
+   "quelle": "Allgemein/183"
+  },
+  {
+   "frage": "Welcher Politiker steht für die \"Ostverträge\"?",
+   "optionen": [
+    "Helmut Kohl",
+    "Willy Brandt",
+    "Michail Gorbatschow",
+    "Ludwig Erhard"
+   ],
+   "richtig": 1,
+   "quelle": "Allgemein/187"
+  },
+  {
+   "frage": "Wer wird als \"Kanzler der Deutschen Einheit\" bezeichnet?",
+   "optionen": [
+    "Gerhard Schröder",
+    "Helmut Kohl",
+    "Konrad Adenauer",
+    "Helmut Schmidt"
+   ],
+   "richtig": 1,
+   "quelle": "Allgemein/191"
+  },
+  {
+   "frage": "Der 27. Januar ist in Deutschland ein offizieller Gedenktag. Woran erinnert dieser Tag?",
+   "optionen": [
+    "an das Ende des Zweiten Weltkrieges",
+    "an die Verabschiedung des Grundgesetzes",
+    "an die Wiedervereinigung Deutschlands",
+    "an die Opfer des Nationalsozialismus (Tag der Befreiung des Vernichtungslagers Auschwitz)"
+   ],
+   "richtig": 3,
+   "quelle": "Allgemein/194"
+  },
+  {
+   "frage": "2007 wurde das 50-jährige Jubiläum der \"Römischen Verträge\" gefeiert. Was war der Inhalt der Verträge?",
+   "optionen": [
+    "Beitritt Deutschlands zur NATO",
+    "Gründung der Europäischen Wirtschaftsgemeinschaft (EWG)",
+    "Verpflichtung Deutschlands zu Reparationsleistungen",
+    "Festlegung der Oder-Neiße-Linie als Ostgrenze"
+   ],
+   "richtig": 1,
+   "quelle": "Allgemein/210"
+  },
+  {
+   "frage": "Wann beginnt die gesetzliche Nachtruhe in Deutschland?",
+   "optionen": [
+    "wenn die Sonne untergeht",
+    "wenn die Nachbarn schlafen gehen",
+    "um 0 Uhr, Mitternacht",
+    "um 22 Uhr"
+   ],
+   "richtig": 3,
+   "quelle": "Allgemein/239"
+  },
+  {
+   "frage": "Welches Ehrenamt müssen deutsche Staatsbürgerinnen und Staatsbürger übernehmen, wenn sie dazu aufgefordert werden?",
+   "optionen": [
+    "Vereinstrainerin/Vereinstrainer",
+    "Wahlhelferin/Wahlhelfer",
+    "Bibliotheksaufsicht",
+    "Lehrerin/Lehrer"
+   ],
+   "richtig": 1,
+   "quelle": "Allgemein/255"
+  },
+  {
+   "frage": "Für wie viele Jahre wird das Landesparlament in Hamburg gewählt?",
+   "optionen": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "richtig": 2,
+   "land": true,
+   "quelle": "Hamburg/1"
+  },
+  {
+   "frage": "Ab welchem Alter darf man in Hamburg bei Kommunalwahlen (Wahl der Bezirksversammlungen) wählen?",
+   "optionen": [
+    "14",
+    "16",
+    "18",
+    "20"
+   ],
+   "richtig": 1,
+   "land": true,
+   "quelle": "Hamburg/2"
+  },
+  {
+   "frage": "Welche Senatorin/welchen Senator hat Hamburg nicht?",
+   "optionen": [
+    "Justizsenatorin/Justizsenator",
+    "Senatorin/Senator für Außenbeziehungen",
+    "Finanzsenatorin/Finanzsenator",
+    "Innensenatorin/Innensenator"
+   ],
+   "richtig": 1,
+   "land": true,
+   "quelle": "Hamburg/7"
+  }
+ ]
+}

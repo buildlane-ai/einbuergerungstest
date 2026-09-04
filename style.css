@@ -141,6 +141,32 @@ h2 { margin: 6px 0 20px; font-size: 22px; line-height: 1.35; }
 .feld input:focus { outline: 2px solid var(--schwarz); outline-offset: -2px; }
 .feld-hinweis { display: block; margin-top: 6px; font: 13px/1.45 system-ui, sans-serif; color: #8a8578; }
 
+/* Gemeinsame Runde: Warten, Stimmstand, Auflösung */
+.fehler { margin: 12px 0 0; font: 15px system-ui, sans-serif; color: var(--rot); }
+.warten-text { font-size: 16px; line-height: 1.55; margin: 0 0 22px; }
+.anwesend { border-top: 1px solid var(--linie); padding-top: 14px; }
+.anwesend-titel { margin: 0 0 4px; font: 600 12px system-ui, sans-serif;
+  letter-spacing: .1em; text-transform: uppercase; color: #8a8578; }
+.anwesend-namen { margin: 0; font: 15px/1.6 system-ui, sans-serif; color: #4a463e; }
+
+.stimmstand { margin: 20px 0 0; font: 14px system-ui, sans-serif; color: #6c675c; }
+
+.option:disabled { cursor: default; opacity: 1; }
+.a-optionen { margin-top: 4px; }
+.a-option { position: relative; overflow: hidden; }
+.a-option .balkenanteil {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: #f0ece2; transition: width .4s;
+}
+.a-option > span { position: relative; }
+.a-option .anteil { margin-left: auto; flex: none;
+  font: 700 14px system-ui, sans-serif; color: #6c675c; }
+.a-option.ist-richtig { border-color: var(--gruen); }
+.a-option.ist-richtig .balkenanteil { background: #dcf0e4; }
+.a-option.ist-richtig .marke { background: var(--gruen); color: #fff; border-color: var(--gruen); }
+.a-option.ist-meine-falsche { border-color: var(--rot); }
+.a-option.ist-meine-falsche .marke { background: var(--rot); color: #fff; border-color: var(--rot); }
+
 /* Urkunde */
 .urkunde {
   background: #fffdf6;
@@ -248,3 +274,7 @@ footer {
   h1 { font-size: 26px; }
   h2 { font-size: 20px; }
 }
+
+/* Sicherheitsnetz: .knopf-gross setzt display:block und schlaegt sonst das
+   hidden-Attribut, dann bleiben verborgene Knoepfe sichtbar. */
+[hidden] { display: none !important; }

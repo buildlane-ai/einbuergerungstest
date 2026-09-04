@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prüfungsleitung</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🥔</text></svg>">
+<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet" href="moderation.css?v=11">
+</head>
+<body class="mod">
+
+<header class="mod-kopf">
+  <div>
+    <p class="amt">Bundesamt für Knollen und Einbürgerung</p>
+    <h1 id="mod-titel">Prüfungsleitung</h1>
+  </div>
+  <div class="mod-zahlen">
+    <div><strong id="z-anwesend">0</strong><span>anwesend</span></div>
+    <div><strong id="z-abgestimmt">0</strong><span>abgestimmt</span></div>
+    <div><strong id="z-frage">–</strong><span>Frage</span></div>
+  </div>
+</header>
+
+<main class="mod-buehne">
+
+  <!-- Lobby -->
+  <section id="m-lobby">
+    <h2>Wer ist da?</h2>
+    <p class="mod-hinweis">Die Gäste öffnen <strong id="gastlink">kartoffeltest.ghose.de</strong>
+      und tragen ihren Namen ein. Sobald alle da sind, Runde starten.</p>
+    <ul id="m-namen" class="mod-namen"></ul>
+    <div class="mod-start">
+      <label>Fragen in dieser Runde
+        <select id="m-anzahl">
+          <option value="8">8 Fragen, etwa 15 Minuten</option>
+          <option value="12" selected>12 Fragen, etwa 20 Minuten</option>
+          <option value="16">16 Fragen, etwa 30 Minuten</option>
+          <option value="33">33 Fragen, volle Länge</option>
+        </select>
+      </label>
+      <button id="m-starten" class="knopf-gross">Verfahren eröffnen</button>
+    </div>
+  </section>
+
+  <!-- Laufende Frage -->
+  <section id="m-frage" hidden>
+    <p id="m-landmarke" class="landmarke" hidden>Landesteil Hamburg</p>
+    <h2 id="m-fragetext" class="mod-frage"></h2>
+    <ol id="m-optionen" class="mod-optionen"></ol>
+    <p class="mod-stand"><span id="m-stand"></span></p>
+    <p id="m-fehlen" class="mod-fehlen"></p>
+  </section>
+
+  <!-- Auflösung -->
+  <section id="m-aufloesung" hidden>
+    <h2 id="m-a-fragetext" class="mod-frage"></h2>
+    <ol id="m-a-optionen" class="mod-optionen mod-ergebnis"></ol>
+    <p id="m-a-hinweis" class="mod-hinweis"></p>
+  </section>
+
+  <!-- Ende -->
+  <section id="m-ende" hidden>
+    <h2>Endstand</h2>
+    <ol id="m-rangliste" class="mod-rangliste"></ol>
+    <p class="mod-hinweis">Alle Anwesenden können sich jetzt auf ihrem Gerät die
+      Kartoffelurkunde ausstellen lassen.</p>
+  </section>
+
+</main>
+
+<footer class="mod-leiste">
+  <button id="m-aufloesen" class="knopf-gross knopf-leise" hidden>Trotzdem auflösen</button>
+  <button id="m-weiter" class="knopf-gross" hidden>Nächste Frage freigeben</button>
+  <button id="m-beenden" class="knopf-gross knopf-leise" hidden>Runde beenden</button>
+  <button id="m-lobby-zurueck" class="knopf-gross knopf-leise" hidden>Neue Runde</button>
+</footer>
+
+<script src="moderation.js?v=11"></script>
+</body>
+</html>

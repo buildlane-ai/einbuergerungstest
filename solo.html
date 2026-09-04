@@ -3,57 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Einbürgerungstest</title>
-<meta name="description" content="Einbürgerungstest zur Kartoffelparty: alle beantworten gemeinsam dieselbe Frage.">
+<title>Einbürgerungstest (Einzelmodus)</title>
+<meta name="description" content="Einbürgerungstest zum Selbermachen: 33 Fragen, bestanden ab 17 richtigen Antworten.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🥔</text></svg>">
-<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
 <main id="app">
 
-  <!-- Anmeldung -->
-  <section id="anmeldung" class="karte">
+  <!-- Startbildschirm -->
+  <section id="start" class="karte">
     <div class="flagge" aria-hidden="true"></div>
-    <p class="amt">Bundesamt für Knollen und Einbürgerung</p>
+    <p class="amt">Prüfungsstelle Kartoffelparty</p>
     <h1>Einbürgerungstest</h1>
 
     <div class="förmlich">
       <p>Sehr geehrte Damen und Herren,</p>
-      <p>der Test wird heute <strong>gemeinsam</strong> abgelegt. Alle Anwesenden
-      beantworten dieselbe Frage zur gleichen Zeit. Sobald alle abgestimmt haben,
-      wird aufgelöst und gemeinsam erörtert; die nächste Frage gibt die
-      Prüfungsleitung frei.</p>
-      <p>Zu jeder Frage werden vier Antworten vorgelegt, genau eine ist richtig.
-      Eine Änderung der Antwort ist nach Abgabe nicht mehr möglich.</p>
-      <p>Sämtliche Fragen entstammen dem amtlichen Fragenkatalog.</p>
+      <p>herzlich willkommen zum Einbürgerungstest. Wir bitten Sie, die folgenden
+      Hinweise vor Beginn aufmerksam zu lesen.</p>
+      <p>Der Test besteht aus <strong>33 Fragen</strong>. Davon beziehen sich 30 Fragen
+      auf allgemeine Kenntnisse der Rechts- und Gesellschaftsordnung sowie der
+      Lebensverhältnisse in Deutschland; 3 Fragen betreffen das Bundesland
+      <strong>Hamburg</strong>. Sämtliche Fragen entstammen dem amtlichen
+      Fragenkatalog.</p>
+      <p>Zu jeder Frage werden Ihnen vier Antworten vorgelegt. Genau eine Antwort
+      ist richtig. Eine Zeitbegrenzung besteht nicht. Hilfsmittel sind nicht
+      zugelassen; wir vertrauen insoweit auf Ihre Redlichkeit.</p>
+      <p>Der Test gilt als <strong>bestanden</strong>, wenn mindestens
+      <strong>17 Fragen</strong> zutreffend beantwortet wurden.</p>
+      <p>Ihr Ergebnis wird ausschließlich auf diesem Gerät berechnet und nicht
+      übermittelt oder gespeichert.</p>
+      <p>Wir wünschen Ihnen viel Erfolg.</p>
     </div>
 
     <label class="feld">
       <span class="feld-titel">Name der Antragstellerin / des Antragstellers</span>
       <input id="name" type="text" maxlength="40" autocomplete="name"
              placeholder="Vor- und Nachname" enterkeyhint="go">
-      <span class="feld-hinweis">Erscheint auf der Anwesenheitsliste und auf Ihrer Kartoffelurkunde.</span>
+      <span class="feld-hinweis">Wird für die Kartoffelurkunde benötigt und verlässt dieses Gerät nicht.
+      Ohne Angabe bleibt auf der Urkunde eine Linie zum Eintragen von Hand.</span>
     </label>
 
-    <button id="beitreten" class="knopf-gross">Am Verfahren teilnehmen</button>
-    <p id="anmeldefehler" class="fehler" hidden></p>
+    <button id="starten" class="knopf-gross">Test beginnen</button>
   </section>
 
-  <!-- Wartebereich -->
-  <section id="warten" class="karte" hidden>
-    <div class="flagge" aria-hidden="true"></div>
-    <p class="amt">Wartebereich</p>
-    <h1 id="warten-titel">Gleich geht es los</h1>
-    <p id="warten-text" class="warten-text"></p>
-    <div class="anwesend">
-      <p class="anwesend-titel">Angemeldet</p>
-      <p id="warten-namen" class="anwesend-namen"></p>
-    </div>
-  </section>
-
-  <!-- Frage -->
-  <section id="frage" class="karte" hidden>
+  <!-- Fragenbildschirm -->
+  <section id="test" class="karte" hidden>
     <div class="kopf">
       <span id="zaehler" class="zaehler"></span>
       <span id="landmarke" class="landmarke" hidden>Landesteil Hamburg</span>
@@ -63,34 +59,29 @@
     <h2 id="fragetext"></h2>
     <div id="optionen" class="optionen"></div>
 
-    <p id="abgestimmt-hinweis" class="stimmstand" hidden></p>
+    <button id="weiter" class="knopf-gross" disabled>Weiter</button>
   </section>
 
-  <!-- Auflösung -->
-  <section id="aufloesung" class="karte" hidden>
-    <div class="kopf"><span id="a-zaehler" class="zaehler"></span></div>
-    <div id="a-stempel" class="stempel"></div>
-    <h2 id="a-fragetext"></h2>
-    <div id="a-optionen" class="optionen a-optionen"></div>
-    <p id="a-hinweis" class="stimmstand"></p>
-  </section>
-
-  <!-- Endergebnis -->
+  <!-- Ergebnisbildschirm -->
   <section id="ergebnis" class="karte" hidden>
     <div class="flagge" aria-hidden="true"></div>
-    <p class="amt">Bundesamt für Knollen und Einbürgerung</p>
+    <p class="amt">Prüfungsstelle Kartoffelparty</p>
     <h1>Ergebnis</h1>
 
     <div id="stempel" class="stempel"></div>
     <p id="punkte" class="punkte"></p>
     <p id="urteil" class="urteil"></p>
 
+    <div id="schluss" class="förmlich"></div>
+
     <button id="urkunde-zeigen" class="knopf-gross">🥔 Kartoffelurkunde ausstellen</button>
 
     <details class="auswertung">
-      <summary>Rangliste der Anwesenden</summary>
-      <ol id="rangliste"></ol>
+      <summary>Alle 33 Fragen mit den richtigen Antworten anzeigen</summary>
+      <ol id="auswertungsliste"></ol>
     </details>
+
+    <button id="nochmal" class="knopf-gross knopf-leise">Test wiederholen</button>
   </section>
 
   <!-- Urkunde -->
@@ -137,11 +128,12 @@
 
 <footer>
   Fragen und Antwortmöglichkeiten wortgleich aus dem
-  <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf">Gesamtfragenkatalog des BAMF</a>,
-  Stand 07.05.2025. Kein amtlicher Test, ohne Gewähr.
+  <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.pdf">Gesamtfragenkatalog des BAMF</a>
+  zum Test „Leben in Deutschland“ und zum „Einbürgerungstest“, Stand 07.05.2025.
+  Kein amtlicher Test, ohne Gewähr.
 </footer>
 
-<script src="urkunde.js?v=11"></script>
-<script src="teilnehmer.js?v=11"></script>
+<script src="fragen.js?v=8"></script>
+<script src="quiz.js?v=8"></script>
 </body>
 </html>
